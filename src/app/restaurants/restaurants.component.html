@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-4">
+    <app-pagination
+      [page]="params.page"
+      [pageSize]="params.pageSize"
+      [collectionSize]="count"
+      (emmiter)="changeMyPage($event)"
+      (secEmmiter)="changeSize($event)"
+    ></app-pagination>
+  </div>
+  <div class="col-8">
+    <div class="row">
+      <h5>Price range</h5>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          type="number"
+          [(ngModel)]="params.filter.priceFrom"
+          (change)="getAllRestaurants()"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          type="number"
+          [(ngModel)]="params.filter.priceTo"
+          (change)="getAllRestaurants()"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4" *ngFor="let restaurant of allRestaurants.results">
+    <app-child-restaurant [restaurant]="restaurant"></app-child-restaurant>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="row">
+  <div
+    class="col-4"
+    style="width: 100%; margin-top: 10px; margin-bottom: 20px; height: 240px"
+  >
+    <h4 (click)="open()">{{ restaurant.name }}</h4>
+    <p>Cuisine Type: {{ restaurant.cuisine }}</p>
+    <p>
+      {{ restaurant.description }}
+    </p>
+    <h6>
+      Price: {{ restaurant.price }}
+      <img src="assets/images/coin-full.png" alt="coin" />
+    </h6>
+    <h6>
+      Rating: {{ restaurant.rating }}
+      <img src="assets/images/star-full.png" alt="coin" />
+    </h6>
+  </div>
+</div>

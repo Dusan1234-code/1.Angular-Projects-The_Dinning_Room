@@ -1,0 +1,23 @@
+<div class="row" style="margin-top: 32px">
+  <div class="col">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" (click)="pageChange(page - 1)">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="pageSizeChange((pageSize = 5))">5</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="pageSizeChange((pageSize = 10))">10</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="pageSizeChange((pageSize = 20))">20</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="pageChange(page + 1)">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
